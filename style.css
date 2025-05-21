@@ -334,7 +334,7 @@ body {
     z-index: 1000;
   }
   .logo {
-    font-size: 7vw;
+    font-size: 5.5vw;
     flex: 1;
     text-align: center;
     color: #e50914 !important;
@@ -361,8 +361,8 @@ body {
   }
   .burger span {
     display: block;
-    width: 30px;
-    height: 4px;
+    width: 5.5vw;
+    height: 0.8vw;
     background: linear-gradient(90deg, #fff 82%, #ffffff 100%);
     border-radius: 2.5px;
     transition: 0.34s cubic-bezier(.36,1.5,.64,1), background 0.17s;
@@ -381,8 +381,8 @@ body {
   }
   .loupe-icone {
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 5vw;
+    height: 5vw;
     margin-right: 6px;
     cursor: pointer;
     z-index: 1101;
@@ -577,8 +577,8 @@ body {
 
   /* ---- POPUP ---- */
   #categories {
-    margin-top: 18vh;
-    padding: 1vw 1vw;
+    margin-top: 13vh;
+    padding: 0vw 1vw;
   }
   #popup-content {
     max-width: 98vw;
