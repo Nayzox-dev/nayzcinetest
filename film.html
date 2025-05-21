@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Film</title>
+    <link rel="stylesheet" href="film.css">
+    <link rel="stylesheet" href="suggestions.css">
+    <link rel="stylesheet" href="addblock.css">
+
+</head>
+<body>
+    
+    <div id="overlay"></div>
+    <div id="popup">
+        <h2>Profitez de vos films sans pub !</h2>
+        <p>Installez <strong>Adblock Plus</strong> pour éviter les interruptions publicitaires.</p>
+        <a href="https://adblockplus.org/" target="_blank">
+            <button class="install-btn">Installer Adblock Plus</button>
+        </a>
+        <button class="close-btn" onclick="closePopup()">Fermer</button>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Nayzcine</div>
+        <nav class="menu">
+            <a href="index2.html">Nouveauté</a>
+            <a href="suggestions.html">Suggestions</a>
+            <a href="report.html">Signaler</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="🔍 Rechercher...">
+            <div id="search-results"></div>
+        </div>
+    </header>
+    <br>
+    <div class="content">
+        <h1 id="movie-title"></h1>
+        <div class="video-container">
+            <iframe id="video-frame" src="" allowfullscreen></iframe>
+        </div>
+        <div class="episode-count" id="episode-count"></div>
+    </div>
+
+    <script src="addblock.js"></script>
+    <script src="film.js"></script>
+    <script src="suggestions.js"></script>
+    <script src="popup.js"></script>
+    
+</body>
+</html>

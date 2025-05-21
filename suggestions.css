@@ -1,0 +1,211 @@
+/* 🎬 Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12vh; /* espace pour la navbar */
+}
+
+/* 🎯 NAVBAR identique à index.html */
+.navbar {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 2vw;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.6);
+}
+
+.logo {
+    font-size: 2.2vw;
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    display: flex;
+    gap: 1.5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: bold;
+    padding: 1.5vh 1vw;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: red;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+    padding: 1.5vh 2vw;
+}
+
+/* 🔍 BARRE DE RECHERCHE (si présente) */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    margin-left: 1.5vw;
+    transition: transform 0.3s ease;
+}
+
+#search {
+    width: 100%;
+    padding: 1vw;
+    border-radius: 10vw;
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+    font-size: 1vw;
+    transition: border 0.3s ease;
+    cursor: pointer;
+}
+
+#search:focus {
+    border: 1px solid red;
+    outline: none;
+}
+
+/* 📝 FORMULAIRE CENTRÉ */
+#suggestions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.4);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#suggestion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+}
+
+#suggestion-form label {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+#suggestion-form input,
+#suggestion-form select,
+#suggestion-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+    margin-top: 5px;
+}
+
+#suggestion-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+#suggestion-form select {
+    cursor: pointer;
+}
+
+#suggestion-form input:focus,
+#suggestion-form select:focus,
+#suggestion-form textarea:focus {
+    border: 1px solid red;
+    outline: none;
+}
+
+#suggestion-form button {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#suggestion-form button:hover {
+    background: darkred;
+}
+
+/* ✅ MESSAGE DE CONFIRMATION */
+#suggestion-response {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: lightgreen;
+    display: none;
+}
